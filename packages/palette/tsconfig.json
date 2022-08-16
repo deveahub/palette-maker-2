@@ -1,0 +1,15 @@
+{
+  "extends": "@rrios-dev/node-tsconfig/node-library.json",
+  "include": [
+    ".",
+    "src/.ts"
+  ],
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "outDir": "./dist",
+  }
+}

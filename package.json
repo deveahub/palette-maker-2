@@ -1,0 +1,40 @@
+{
+  "name": "@rrios-dev/ui-kit",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "create:package": "yarn templates-cli",
+    "build": "turbo run build --filter=./apps/*",
+    "commit": "cz",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "prepare": "husky install",
+    "dev": "yarn workspace web run dev",
+    "test:packages": "turbo run test --filter=@rrios-dev/*"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.23.2",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@rrios-dev/templates-cli": "^0.0.6",
+    "commitizen": "^4.2.5",
+    "commitlint": "^17.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "turbo": "latest"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "packageManager": "yarn@1.17.3",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
